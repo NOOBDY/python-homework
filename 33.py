@@ -14,4 +14,3 @@ if __name__ == "__main__":
             gcd = i + 1
 
         print(gcd)
-

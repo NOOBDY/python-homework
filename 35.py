@@ -12,7 +12,6 @@ def process(string: str):
             print(res)
             index += len(substring)
 
-
         if string[index] == "]":
             return string[:index]
 
@@ -20,6 +19,7 @@ def process(string: str):
 
     return res
 
+
 if __name__ == "__main__":
-    #print(process("3[a]2[bc]"))
+    # print(process("3[a]2[bc]"))
     print(process("3[a2[c]bc]"))

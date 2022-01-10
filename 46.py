@@ -1,5 +1,6 @@
 from typing import List
 
+
 def check(meetings: List, office_count: int) -> bool:
     time = [0 for _ in range(24)]
 
@@ -9,10 +10,12 @@ def check(meetings: List, office_count: int) -> bool:
 
     return not office_count + 1 in time
 
+
 if __name__ == "__main__":
     office_count, meeting_count = [int(i) for i in input().split(" ")]
 
-    meetings = [[int(i) for i in input().split(" ")[1:]] for _ in range(meeting_count)]
+    meetings = [[int(i) for i in input().split(" ")[1:]]
+                for _ in range(meeting_count)]
 
     ans = 0
 
@@ -30,6 +33,4 @@ if __name__ == "__main__":
         if check(room_combinations, office_count):
             ans = max(ans, sum([r[1] - r[0] for r in room_combinations]))
 
-
     print(ans)
-

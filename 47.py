@@ -1,10 +1,12 @@
 from typing import List
 
+
 def add_w_front(lines: List[List[str]], *args) -> List[List[str]]:
     i = int(args[0])
     n = int(args[1])
     lines[i - 1].insert(n - 1, args[2])
     return lines
+
 
 def add_w_after(lines: List[List[str]], *args) -> List[List[str]]:
     i = int(args[0])
@@ -12,15 +14,18 @@ def add_w_after(lines: List[List[str]], *args) -> List[List[str]]:
     lines[i - 1].insert(n, args[2])
     return lines
 
+
 def add_s_front(lines: List[List[str]], *args) -> List[List[str]]:
     i = int(args[0])
     lines[i - 1].insert(0, args[1])
     return lines
 
+
 def add_s_after(lines: List[List[str]], *args) -> List[List[str]]:
     i = int(args[0])
     lines[i - 1].append(args[1])
     return lines
+
 
 def insert_front(lines: List[List[str]], *args) -> List[List[str]]:
     res = []
@@ -36,6 +41,7 @@ def insert_front(lines: List[List[str]], *args) -> List[List[str]]:
 
     return res
 
+
 def insert_after(lines: List[List[str]], *args) -> List[List[str]]:
     res = []
 
@@ -50,20 +56,25 @@ def insert_after(lines: List[List[str]], *args) -> List[List[str]]:
 
     return res
 
+
 def del_w(lines: List[List[str]], *args) -> List[List[str]]:
     i = int(args[0])
     n = int(args[1])
     lines[i - 1].pop(n - 1)
     return lines
 
+
 def del_l(lines: List[List[str]], *args) -> List[List[str]]:
     i = int(args[0])
     lines.pop(i - 1)
     return lines
 
+
 def replace(lines: List[List[str]], *args) -> List[List[str]]:
-    lines = [[args[1] if word == args[0] else word for word in line] for line in lines]
+    lines = [[args[1] if word == args[0] else word for word in line]
+             for line in lines]
     return lines
+
 
 def count(lines: List[List[str]]) -> List[List[str]]:
     print(sum([len(line) for line in lines]))
@@ -77,11 +88,11 @@ if __name__ == "__main__":
         "ADD_S_FRONT": add_s_front,
         "ADD_S_AFTER": add_s_after,
         "INSERT_FRONT": insert_front,
-        "INSERT_AFTER":insert_after,
+        "INSERT_AFTER": insert_after,
         "DEL_W": del_w,
-        "DEL_L":del_l,
-        "REPLACE":replace,
-        "COUNT":count
+        "DEL_L": del_l,
+        "REPLACE": replace,
+        "COUNT": count
     }
 
     line_count, command_count = [int(i) for i in input().split(" ")]

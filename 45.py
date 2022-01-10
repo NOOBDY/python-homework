@@ -1,5 +1,6 @@
 from typing import List, Dict
 
+
 def shortest_route(connections, start, target):
     vertices: Dict[str, List[str]] = {}
     for edge in connections:
@@ -32,7 +33,8 @@ if __name__ == "__main__":
     connections += [c[::-1] for c in connections if c[::-1] not in connections]
 
     try:
-        res = shortest_route(connections, start, mid) + shortest_route(connections, mid, target)[1:]
+        res = shortest_route(connections, start, mid) + \
+            shortest_route(connections, mid, target)[1:]
 
         print(len(res) - 1)
         print("-".join(res))

@@ -18,6 +18,7 @@ def perm(string: str, depth: int):
 
     return sorted(res)
 
+
 if __name__ == "__main__":
     string, l = input().split()
     print(" ".join(perm(string, int(l))))

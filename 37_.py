@@ -2,7 +2,7 @@ if __name__ == "__main__":
     count = int(input())
 
     ranges = [[int(i) for i in input().split(",")] for _ in range(count)]
-    ranges = sorted(ranges, key=lambda x:x[0])
+    ranges = sorted(ranges, key=lambda x: x[0])
 
     begin = ranges[0][0]
     end = ranges[0][1]
@@ -17,4 +17,3 @@ if __name__ == "__main__":
             end = r[1]
 
     print(f"{begin},{end}")
-
