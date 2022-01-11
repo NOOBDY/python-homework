@@ -26,13 +26,11 @@ if __name__ == "__main__":
 
         for i in range(1, len(first_pass)):
             if first_pass[i - 1] == "+":
-                second_pass[-2] = str(int(second_pass[-2]
-                                          ) + int(first_pass[i]))
+                second_pass[-2] = str(int(second_pass[-2]) + int(first_pass[i]))
                 second_pass = second_pass[:-1]
 
             elif first_pass[i - 1] == "-":
-                second_pass[-2] = str(int(second_pass[-2]
-                                          ) - int(first_pass[i]))
+                second_pass[-2] = str(int(second_pass[-2]) - int(first_pass[i]))
                 second_pass = second_pass[:-1]
 
             else:

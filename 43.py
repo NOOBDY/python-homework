@@ -5,8 +5,7 @@ class School:
     def __init__(self, _input: List[str]) -> None:
         conditions = ["BC", "NC", "CT", "NS", "NM", "HL", "NL"]
         self.name = _input[0]
-        self.attr = {
-            condition: condition in _input[1:] for condition in conditions}
+        self.attr = {condition: condition in _input[1:] for condition in conditions}
         self.score = 0
 
     def calc_score(self, criteria: List[List[str]]):
@@ -31,8 +30,6 @@ if __name__ == "__main__":
     for school in schools:
         school.calc_score(criteria)
 
-    schools = sorted([school for school in schools if school.score != 0],
-                     key=lambda x: x.score, reverse=True)
+    schools = sorted([school for school in schools if school.score != 0], key=lambda x: x.score, reverse=True)
 
-    print(" ".join([",".join([school.name, str(school.score)])
-          for school in schools]))
+    print(" ".join([",".join([school.name, str(school.score)]) for school in schools]))

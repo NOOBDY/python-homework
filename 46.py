@@ -14,8 +14,7 @@ def check(meetings: List, office_count: int) -> bool:
 if __name__ == "__main__":
     office_count, meeting_count = [int(i) for i in input().split(" ")]
 
-    meetings = [[int(i) for i in input().split(" ")[1:]]
-                for _ in range(meeting_count)]
+    meetings = [[int(i) for i in input().split(" ")[1:]] for _ in range(meeting_count)]
 
     ans = 0
 
